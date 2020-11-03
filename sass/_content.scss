@@ -1,0 +1,72 @@
+.content {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding: 0 20rem 0 15rem;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-row: 3 / 4;
+        grid-column: 1;
+        padding: 10rem 8rem;
+        text-align: center;
+    }
+}
+
+.form {
+    position: relative;
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+
+    &__input {
+        display: block;
+        font-family: inherit;
+        font-size: 1.4rem;
+        width: 100%;
+        padding: 1.5rem 2rem;
+        border: 1px solid rgba($primary-desaturated-red, .6);
+        border-radius: 100px;
+        outline: none;
+        height: 4.5rem;
+
+        &::-webkit-input-placeholder {
+            color: $primary-desaturated-red;
+        }
+
+        &::placeholder {
+            color: $primary-desaturated-red;
+        }
+
+        &:focus {
+            border: 2px solid $primary-soft-red;
+        }
+    }
+
+    &__label {
+        display: none;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 4.5rem;
+        padding: 0 3.5rem;
+        border: none;
+        border-radius: 50px;
+        background-image: $gradient-linear-2;
+        box-shadow: 0 1rem 3.5rem rgba($primary-desaturated-red, .7);
+
+        &:hover,
+        &:active {
+            opacity: 0.6;
+        }
+    }
+
+    &__err-img {
+        position: absolute;
+        top: 0;
+        right: 9rem;
+        transform: translateY(50%);
+
+        display: none;
+    }
+}

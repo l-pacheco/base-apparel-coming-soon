@@ -1,0 +1,19 @@
+.heading-primary {
+    font-size: 6rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5rem;
+    color: $neutral-dark-grayish-red;
+    animation: moveInLeft 1s ease-out;
+
+    span {
+        display: block;
+        font-weight: 300;
+        color: $primary-desaturated-red;
+    }
+}
+
+.description {
+    line-height: 1.4;
+    color: $primary-desaturated-red;
+    animation: moveInRight 1s ease-out;
+}
